@@ -650,6 +650,8 @@
       .then(response => response.json())
       .then(data => {
         const dataContainer = document.getElementById('dataContainer');
+
+        console.log(data)
         
         data.forEach(item => {
           const { data, texto, titlo, img } = item;
@@ -674,6 +676,8 @@
           
           dataContainer.appendChild(div);
         });
+
+    
       })
       .catch(error => {
         console.log('Error:', error);
